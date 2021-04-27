@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Calcola Circonferenza</title>
+        <script type="text/javascript">
+            function calcola() 
+            {
+            var raggio = eval(document.getElementById("casella").value);
+            var circonferenza = raggio * (2 * Math.PI)
+            document.getElementById("totale").value = circonferenza;
+
+            }
+         </script>
+
+     </head>
+
+    <body>
+        
+        <div id="tabella">
+            <table width="10%" border="0" cellpadding="5" align="center">
+            
+                <form action="URL-script" method="POST">
+                <tr>
+                    <th width="50%"></th>
+                    <th width="50%"></th>
+                </tr>
+
+                <tr>
+                    <th>Raggio Cerchio:</th>
+                    <th><input id="casella" type="text" name="Raggio" size="20"></th>
+                    <th><input type="button" name="Calcola" value="Calcola" onclick="calcola()"></th>
+                </tr>
+
+                <tr>
+                   <th>Lunghezza Circonferenza:</th> 
+                   <th> <input type="text" id="totale" value="0"></th>
+                   <th><input type="reset" name="annulla" value="Reset"></th>
+                </tr>
+
+                
+                </form>
+
+        </div>
+
+    </body>
+
+</html>
